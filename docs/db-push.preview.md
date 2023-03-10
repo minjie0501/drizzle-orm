@@ -21,7 +21,7 @@ You can use our [Discord](https://discord.gg/MdXYZk5QtH) and put any `push` rela
 2. Create `drizzle.config.json` with needed options for push command
 
 
-```json
+```jsonc
 {
   // path to introspect output
   "out": "./migrations", // needed only for introspect
