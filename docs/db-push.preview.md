@@ -1,7 +1,5 @@
 ## How to setup and test preview database push feature
 
----
-
 Currently `drizzle-kit push` is available **only** for `MySQL` dialect on internal npm release tag
 
 This feature is still in testing process together with adding more cli warnings and suggestions
@@ -10,13 +8,9 @@ If you want to give it a try and send us any feedback or bug report - here is a 
 
 ## Where to leave any feedback, suggestions or bug report
 
----
-
 You can use our [Discord]() and put any `push` related messages in `#db-push` channel
 
 ## How to install and use push command
-
----
 
 > **Note**
 > `drizzle-kit introspect:mysql` was changed in this release and now accept only `--config` cli param to define custom config path. All other variables should be defined in `drizzle.config.json` file
@@ -56,8 +50,6 @@ You can use our [Discord]() and put any `push` related messages in `#db-push` ch
 3. Run `drizzle-kit push:mysql` command to apply all schema changes to database
 
 ## Current TODO list to make `drizzle-kit@db-push` release to be ready for `latest`
-
----
 
 - [ ] Add suggestions for possible data loss in database
 
