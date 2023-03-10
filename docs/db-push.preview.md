@@ -56,11 +56,11 @@ You can use our [Discord](https://discord.gg/MdXYZk5QtH) and put any `push` rela
 > **Note**
 > Currently on `drizzle-kit push:mysql` you will see 2 possible outputs
 > 
-> `[✓] Changes applied` - if `drizzl-kit` detected new schema changes and succesfully applied them on database
+> `[✓] Changes applied` - if `drizzle-kit` detected new schema changes and succesfully applied them on database
 >
 > `[i] No changes detected` - no schema changes was detected
 >
-> If some error will appear - you will see database error output, that could be sent back to us for fixes
+> If some error will appear - you will see database error output that could be sent back to us for fixes
 
 - [ ] Add more tests for different migration test cases
 - [ ] Handle rollbacks if push modification won't end up with success ??
