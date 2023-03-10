@@ -8,7 +8,7 @@ If you want to give it a try and send us any feedback or bug report - here is a 
 
 ## Where to leave any feedback, suggestions or bug report
 
-You can use our [Discord]() and put any `push` related messages in `#db-push` channel
+You can use our [Discord](https://discord.gg/MdXYZk5QtH) and put any `push` related messages in `#db-push` channel
 
 ## How to install and use push command
 
