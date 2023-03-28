@@ -12,39 +12,61 @@ You can use our [Discord](https://discord.gg/MdXYZk5QtH) and put any `push` rela
 
 ## How to install and use push command
 
-> **Note**
-> `drizzle-kit introspect:mysql` was changed in this release and now accept only `--config` cli param to define custom config path. All other variables should be defined in `drizzle.config.json` file
-
 </br>
 
 1. Install `drizzle-kit@db-push` tag
-2. Create `drizzle.config.json` with needed options for push command
+2. Create `drizzle.config.json[js][ts]` with needed options for push command
 
 
+`drizzle.config.json` example
 ```jsonc
 {
-  // path to introspect output
-  "out": "./migrations", // needed only for introspect
-  // path to schema file (or several schema files)
   "schema": "./db", 
-  // you could specify array for several schema files
-  // "schema": ["./db", "./core-db", "./core/**/*.ts"],
   "connectionString": "mysql://root:password@127.0.0.1:3306/my_db"
 }
-// or
+```
+or
+```jsonc
 {
-  // path to introspect output
-  "out": "./migrations", // needed only for introspect
-  // path to schema file (or several schema files)
-  "schema": "./db", 
-  // you could specify array for several schema files
-  // "schema": ["./db", "./core-db", "./core/**/*.ts"],
+  "schema": ["./db", "./core-db", "./core/**/*.ts"],
   "host": "127.0.0.1",
   "port": "3306",
   "user": "root",
   "password": "password",
   "database": "my_db",
 }
+```
+
+`drizzle.config.js` example
+```js
+/** @type { import("drizzle-kit").Config } */
+export default {
+  schema: "./schema.ts",
+  connectionString: "mysql://root:password@127.0.0.1:3306/my_db",
+};
+```
+or
+```js
+/** @type { import("drizzle-kit").Config } */
+export default {
+  schema: ["./db", "./core-db", "./core/**/*.ts"],
+  host: "127.0.0.1",
+  port: "3306",
+  user: "root",
+  password: "password",
+  database: "my_db",
+};
+```
+
+`drizzle.config.ts` example
+```ts
+import type { Config } from "drizzle-kit";
+import "dotenv/config";
+
+export default {
+  schema: "./schema.ts",
+  connectionString: process.env.DB_URL,
+} satisfies CliConfig;
 ```
 
 3. Run `drizzle-kit push:mysql` command to apply all schema changes to database
