@@ -66,7 +66,7 @@ import "dotenv/config";
 export default {
   schema: "./schema.ts",
   connectionString: process.env.DB_URL,
-} satisfies CliConfig;
+} satisfies Config;
 ```
 
 3. Run `drizzle-kit push:mysql` command to apply all schema changes to database
